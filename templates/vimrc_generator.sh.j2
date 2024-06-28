@@ -1,0 +1,14 @@
+if [ "$UID" -ne 0 ]; then
+out_file=~/.vimrc
+if [ ! -f "$out_file" ]; then
+IFS="
+"
+
+### variables ###
+
+cat /dev/null > "$out_file"
+
+### scripts ###
+
+fi
+fi
