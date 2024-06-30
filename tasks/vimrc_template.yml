@@ -5,7 +5,7 @@
 
     - name: initialize vimrc generator
       ansible.builtin.template:
-        src: vimrc_generator.sh.j2
+        src: vim_configurator.sh.j2
         dest: "{{ vimrc_script }}"
         force: false
         owner: root

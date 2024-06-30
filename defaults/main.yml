@@ -1,5 +1,5 @@
 ---
 
-vimrc_script: /etc/profile.d/vimrc_generator.sh
+vimrc_script: /etc/profile.d/vim_configurator.sh
 
 ...
