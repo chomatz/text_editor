@@ -1,0 +1,17 @@
+---
+
+- name: ensure tasks run only on selected os releases
+  block:
+
+    - name: "add {{ text_label }} {{ text_tag }} to {{ text_file }}"
+      ansible.builtin.blockinfile:
+        path: "{{ text_file }}"
+        insertafter: "{{ text_tag }}"
+        marker: "### {mark} {{ text_label }} {{ text_tag }} ###"
+        block: "{{ text_content }}"
+
+  when: >
+    (ansible_distribution == "Archlinux" and ansible_distribution_release == "holo") or
+    ansible_distribution == "Fedora"
+
+...
